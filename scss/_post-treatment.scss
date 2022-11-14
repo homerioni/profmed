@@ -1,0 +1,192 @@
+.post-treatment {
+    padding-bottom: 16rem;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 100.6rem;
+
+        &__heading {
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-size: 4.5rem;
+            line-height: 5.5rem;
+        }
+
+        &__description {
+            margin-bottom: 1.6rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.4rem;
+
+            .blue {
+                color: $blue;
+            }
+        }
+
+        &__list-heading {
+            margin-top: .4rem;
+            margin-bottom: 1.6rem;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: $blue;
+        }
+
+        &__list {
+            width: 79rem;
+
+            &-item {
+                margin-left: 1em;
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                list-style: inside;
+                list-style-position: outside;
+
+                &:not(:last-child) {
+                    margin-bottom: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 51.5rem;
+        background-color: #FDFEFF;
+        border-radius: 2.5rem;
+        box-shadow: 0px 5px 15px rgba(30, 135, 250, 0.07);
+
+        &__top {
+            padding: 4rem 4rem 3.2rem 4rem;
+            width: 100%;
+            background-color: #D3E8FF;
+            border-radius: inherit;
+
+            &-heading {
+                margin-bottom: 1.2rem;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+            }
+
+            &-subheading {
+                margin-bottom: 1.6rem;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+            }
+
+            &-link {
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+
+                img {
+                    margin-right: 2rem;
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    object-fit: contain;
+                }
+
+                span {
+                    border: none;
+                }
+            }
+        }
+
+        &__bottom {
+            padding: 2.8rem 4rem 4.8rem 4rem;
+
+            &-heading {
+                margin-left: .7rem;
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 20rem;
+
+        .container {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__left {
+            margin-bottom: 12rem;
+            width: 100%;
+
+            &__heading {
+                margin-bottom: 4rem;
+                font-size: 6rem;
+                line-height: 8rem;
+            }
+
+            &__description {
+                font-size: 3rem;
+                line-height: 3.6rem;
+            }
+
+            &__list-heading {
+                margin-top: 2.4rem;
+                margin-bottom: 2.4rem;
+                font-size: 3rem;
+                line-height: 3.6rem;
+            }
+
+            &__list {
+                width: 100%;
+                &-item {
+                    font-size: 3rem;
+                    line-height: 3.6rem;
+                }
+            }
+        }
+
+        &__right {
+            width: 100%;
+
+            &__top {
+                padding: 5.6rem 4rem;
+
+                &-heading {
+                    margin-bottom: 4rem;
+                    font-size: 4rem;
+                    line-height: 4.8rem;
+                }
+
+                &-subheading {
+                    margin-bottom: 4rem;
+                    font-size: 3rem;
+                    line-height: 3.6rem;
+                }
+
+                &-link {
+                    font-size: 3.6rem;
+                    line-height: 4.4rem;
+
+                    img {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                }
+            }
+
+            &__bottom {
+                padding: 4.8rem 4rem;
+
+                &-heading {
+                    margin-bottom: 4rem;
+                    font-size: 3rem;
+                    line-height: 3.6rem;
+                }
+            }
+        }
+    }
+}

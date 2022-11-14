@@ -1,0 +1,52 @@
+@import "param";
+@import "set";
+@import "components";
+
+@import "header";
+@import "footer";
+@import "head-doctor";
+@import "post-treatment";
+@import "treatment";
+@import "hot-keys";
+@import "intro";
+@import "services";
+@import "prices";
+@import "advantages";
+@import "about-numbers";
+@import "video";
+@import "team";
+@import "consultation";
+@import "stages";
+@import "rooms";
+@import "history";
+@import "reviews";
+@import "licenses";
+@import "map";
+@import "worker";
+@import "requisites";
+@import "sidebar";
+@import "min-clear";
+@import "result";
+@import "offer";
+@import "program";
+
+
+@import "modal";
+
+
+
+body.lock {
+  overflow: hidden;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+}

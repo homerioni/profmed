@@ -1,0 +1,155 @@
+.worker {
+  margin-bottom: 16rem;
+
+  &__container {
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  &__image-block {
+    flex: none;
+    width: 51.5rem;
+
+    > *:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 65.4rem;
+    padding: 1.2rem;
+    border-radius: 2.5rem;
+    background-color: $white;
+    box-shadow: 0 0.5rem 1.5rem 0 #1E87FA12;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__info-block {
+    flex: auto;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    > *:not(:last-child, .worker__title) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+  }
+
+  &__post {
+    color: $blue;
+  }
+
+  &__experience {
+    .gray {
+      margin-right: 1.2rem;
+      color: $gray;
+    }
+  }
+
+  &__list-box {
+  }
+
+  &__list-title {
+    margin-bottom: 1.6rem;
+    color: $gray;
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+    list-style-type: disc;
+    margin-left: 2.4rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .worker {
+    margin-bottom: 20rem;
+
+    &__container {
+      display: block;
+    }
+
+    &__image-block {
+      width: 100%;
+      margin-bottom: 8rem;
+
+      > *:not(:last-child) {
+        margin-bottom: 8rem;
+      }
+    }
+
+    &__img-box {
+      width: 50.2rem;
+      height: 64.4rem;
+      padding: 0.8rem;
+      margin: 0 auto;
+      border-radius: 3rem;
+      box-shadow: 0 1rem 3rem 0 #1E87FA12;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+
+    &__info-block {
+      font-size: 3rem;
+      line-height: 3.6rem;
+
+      > *:not(:last-child, .worker__title) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__title {
+      font-size: 6rem;
+      line-height: 8rem;
+    }
+
+    &__post {
+    }
+
+    &__experience {
+      .gray {
+        margin-right: 1.6rem;
+      }
+    }
+
+    &__list-box {
+    }
+
+    &__list-title {
+      margin-bottom: 2.4rem;
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+      margin-left: 3rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}

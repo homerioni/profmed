@@ -1,0 +1,553 @@
+@import "param";
+
+body {
+  padding-top: 9.6rem;
+
+  @media (max-width: 48em) {
+    padding-top: 16rem;
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: $white;
+  box-shadow: 0 3px 1.2rem rgba(30, 135, 250, 0.04);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__burger-btn {
+  }
+
+  &__logo {
+    flex: none;
+    display: block;
+    width: 18.2rem;
+    height: 4.8rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  &__menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    > .arrow-right {
+      flex: none;
+      width: 1.6rem;
+      height: 1rem;
+      margin-left: 1.2rem;
+      transition: transform .2s ease;
+
+      path {
+        stroke: $def-color;
+      }
+    }
+
+    &:hover {
+      @media (min-width: 48.01em) {
+        color: $blue;
+
+        > svg {
+          transform: scaleY(-1);
+
+          path {
+            stroke: $blue;
+          }
+        }
+
+        > .header__menu-sub-list {
+          visibility: visible;
+          z-index: 3;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__menu-sub-list {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -2.4rem;
+    top: calc(100% + 1.2rem);
+    z-index: -1;
+    width: 33.5rem;
+    border-radius: 1.5rem;
+    background-color: $white;
+    box-shadow: 0 0.5rem 1.5rem rgba(30, 135, 250, 0.07);
+    transition: opacity .2s ease;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1.2rem;
+      display: block;
+      width: 100%;
+      height: 1.2rem;
+    }
+
+    .header__menu-sub-list {
+      left: calc(100% - 1.2rem);
+      top: 0;
+      max-height: 70rem;
+      opacity: 1;
+      overflow-y: scroll;
+
+      .header__menu-sub-item {
+        color: $gray;
+
+        &:hover {
+          color: $def-color;
+        }
+      }
+    }
+  }
+
+  &__menu-sub-item {
+    position: relative;
+    color: $def-color;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #F1F6FF;
+    }
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.4rem 3rem 2.4rem 2.4rem;
+
+      > .arrow-right {
+        flex: none;
+        width: 1rem;
+        height: 1.6rem;
+        margin-left: 1rem;
+        transition: transform .2s ease;
+
+        path {
+          stroke: $def-color;
+        }
+      }
+    }
+
+    &:hover {
+      @media (min-width: 48.01em) {
+        > a > svg {
+          transform: rotate(90deg);
+        }
+
+        > .header__menu-sub-list {
+          visibility: visible;
+          z-index: 3;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    flex: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 1.6rem 2.8rem;
+  }
+
+  &__contact-box {
+  }
+
+  &__contact-name {
+  }
+
+  &__phone-block {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  &__phone-numbers {
+    margin-right: 1.2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    > * {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 0.4rem;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  &__phone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    border: 2px solid $blue;
+    border-radius: 100%;
+
+    > svg {
+      width: 2.1rem;
+      height: 2.1rem;
+
+      path {
+        stroke: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .header {
+    padding: 4rem 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: $white;
+      border-radius: 0 0 3rem 3rem;
+      box-shadow: 0 3px 2.4rem rgba(30, 135, 250, 0.04);
+    }
+
+    &__container {
+    }
+
+    &__burger-btn {
+      flex: none;
+      position: relative;
+      width: 6.4rem;
+      height: 6.4rem;
+
+      > span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 4.4rem;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        background-color: $def-color;
+        transition: opacity .2s ease;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 1.6rem;
+        left: 50%;
+        width: 4.4rem;
+        height: 2px;
+        transform: translateX(-50%);
+        background-color: $def-color;
+        transition: transform .3s ease;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 1.6rem;
+        left: 50%;
+        width: 4.4rem;
+        height: 2px;
+        transform: translateX(-50%);
+        background-color: $def-color;
+        transition: transform .3s ease;
+      }
+
+      &.active {
+        > span {
+          opacity: 0;
+        }
+
+        &:before {
+          transform: translate(-50%, 1.4rem) rotate(45deg);
+        }
+
+        &:after {
+          transform: translate(-50%, -1.4rem) rotate(-45deg);
+        }
+      }
+    }
+
+    &__logo {
+      width: 31.4rem;
+      height: 8rem;
+    }
+
+    &__menu {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 13rem;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      padding-top: 3rem;
+      padding-bottom: 10rem;
+      background-color: $white;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+    }
+
+    &__menu-list {
+      position: relative;
+      display: block;
+
+      &.active {}
+    }
+
+    &__menu-item {
+      justify-content: space-between;
+      padding: 0;
+      font-size: 3.6rem;
+      border-bottom: 1px solid #F1F6FF;
+      background-color: $white;
+      transition: transform .3s ease;
+
+      > a {
+        display: block;
+        width: 100%;
+        padding: 4.8rem 10.8rem 4.8rem 4rem;
+        transition: transform .3s ease;
+      }
+
+      &.active {
+        > a {
+          transform: translateX(6rem);
+        }
+
+        > .arrow-right {
+          transform: translate(12rem, -50%) rotate(-90deg);
+        }
+
+        > .arrow-left {
+          transform: translate(0, -50%);
+        }
+      }
+
+      > .arrow-right {
+        position: absolute;
+        right: 4.8rem;
+        top: 50%;
+        width: 3.2rem;
+        height: 2rem;
+        margin-left: 2rem;
+        transform: translateY(-50%) rotate(-90deg);
+        transition: transform .3s ease;
+      }
+
+      > .arrow-left {
+        position: absolute;
+        left: 4.4rem;
+        top: 50%;
+        width: 3.2rem;
+        height: 2rem;
+        margin-left: 0;
+        transform: translate(-12rem, -50%);
+        transition: transform .3s ease;
+      }
+    }
+
+    &__menu-sub-list {
+      display: none;
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      top: 100%;
+      z-index: 4;
+      width: 100%;
+      border-radius: 0;
+      border-top: 1px solid #F1F6FF;
+      box-shadow: none;
+      transition: opacity .2s ease;
+
+      &:before {
+        content: none;
+      }
+
+      .header__menu-sub-list {
+        left: 0;
+        top: 100%;
+      }
+    }
+
+    &__menu-sub-item {
+      background-color: $white;
+      transition: transform .2s ease;
+
+      > a {
+        padding: 4.8rem 4rem;
+
+        > span {
+          transition: transform .3s ease;
+        }
+
+        > .arrow-right {
+          position: absolute;
+          right: 4.8rem;
+          top: 50%;
+          width: 2rem;
+          height: 3.2rem;
+          margin-left: 2rem;
+          transform: translateY(-50%);
+          transition: transform .3s ease;
+        }
+
+        > .arrow-left {
+          position: absolute;
+          left: 4.4rem;
+          top: 50%;
+          width: 3.2rem;
+          height: 2rem;
+          margin-left: 0;
+          transform: translate(-12rem, -50%);
+          transition: transform .3s ease;
+        }
+      }
+
+      &.active {
+        > a {
+          > span {
+            transform: translateX(6rem);
+          }
+
+          > .arrow-right {
+            transform: translate(12rem, -50%) rotate(-90deg);
+          }
+
+          > .arrow-left {
+            transform: translate(0, -50%);
+          }
+        }
+      }
+    }
+
+    &__contacts {
+      display: block;
+      padding: 8rem 4rem;
+    }
+
+    &__btn {
+      padding: 4rem 5.6rem;
+      margin-bottom: 8rem;
+    }
+
+    &__contact-box {
+      font-weight: 500;
+      font-size: 3rem;
+
+      > :not(.header__contact-name) {
+        display: block;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__contact-name {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.4rem;
+      font-weight: 500;
+      font-size: 2.6rem;
+      color: $gray;
+
+      > svg {
+        flex: none;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 0.8rem;
+        transform: translateY(-1px);
+
+        path {
+          stroke: $gray;
+        }
+      }
+    }
+
+    &__phone-block {
+      display: flex;
+      align-items: center;
+      margin-left: 3rem;
+    }
+
+    &__phone-numbers {
+      margin-right: 1.2rem;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+
+      > * {
+        display: block;
+
+        &:not(:last-child) {
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+
+    &__phone-icon {
+      width: 8rem;
+      height: 8rem;
+      border: none;
+      background-color: $blue;
+
+      > svg {
+        width: 4.2rem;
+        height: 4.2rem;
+
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}

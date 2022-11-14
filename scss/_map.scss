@@ -1,0 +1,334 @@
+.map {
+  position: relative;
+  padding-bottom: 13rem;
+  padding-top: 11rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 97.4rem;
+    height: 100%;
+    border-radius: 2.5rem 0 0 0;
+    background-color: $blue;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2.4rem;
+  }
+
+  &__text-block {
+    flex: none;
+    width: 51.5rem;
+  }
+
+  &__sub-title {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $blue;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+  }
+
+  &__desc {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  &__form {
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid #BFDDFF;
+
+    > input {
+      width: 100%;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.4rem;
+
+      &::placeholder {
+        color: $gray;
+      }
+    }
+
+    > svg {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &--text {
+      margin-bottom: 0;
+    }
+
+    &.ok {
+      border-bottom: 2px solid $azure;
+
+      .ok {
+        display: initial;
+      }
+    }
+
+    &.error {
+      border-bottom: 2px solid #FFA5A5;
+
+      > input::placeholder {
+        color: #FFA5A5;
+      }
+
+      .error {
+        display: initial;
+      }
+    }
+  }
+
+  &__label-box {
+    margin-bottom: 6rem;
+    margin-top: 7rem;
+  }
+
+  &__label-name {
+    margin-bottom: 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    color: $gray;
+  }
+
+  &__map-block {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+
+    #map {
+      width: 78.4rem;
+      height: 62.6rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 1rem 3.4rem 0 rgba(30, 135, 250, 0.2);
+      overflow: hidden;
+    }
+  }
+
+  &__contacts {
+  }
+
+  &__contacts-item {
+    color: $white;
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__contacts-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #D1E7FE;
+
+    > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 0.8rem;
+      transform: translateY(-1px);
+
+      path {
+        stroke: #D1E7FE;
+      }
+    }
+  }
+
+  &__contacts-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    > *:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    > a {
+      position: relative;
+      width: fit-content;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(100% + 2px);
+        display: block;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        background-color: $white;
+        transition: transform .3s ease;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .map {
+    padding-bottom: 26rem;
+    padding-top: 0;
+    margin-bottom: -22rem;
+
+    &:before {
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 115rem;
+      border-radius: 3rem 3rem 0 0;
+    }
+
+    &__container {
+      display: block;
+    }
+
+    &__text-block {
+      width: 100%;
+      margin-bottom: 12rem;
+    }
+
+    &__sub-title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 6rem;
+      line-height: 8rem;
+    }
+
+    &__desc {
+      margin-bottom: 8rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__form {
+      margin-bottom: 6rem;
+    }
+
+    &__label {
+      margin-bottom: 6rem;
+      border-bottom: 1px solid #BFDDFF;
+
+      > input {
+        margin-bottom: 1.6rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+      }
+
+      > svg {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+
+      &--text {
+        margin-bottom: 0;
+      }
+
+      &.ok {
+      }
+    }
+
+    &__label-box {
+      margin: 8rem 0;
+    }
+
+    &__label-name {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__map-block {
+      display: block;
+
+      #map {
+        width: 100%;
+        height: 70.4rem;
+        margin-bottom: 5.6rem;
+        border-radius: 3rem;
+        box-shadow: 0 2rem 6.8rem 0 rgba(30, 135, 250, 0.2);
+      }
+    }
+
+    &__contacts {
+    }
+
+    &__contacts-item {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__contacts-title {
+      justify-content: center;
+      margin-bottom: 2.4rem;
+      font-size: 2.6rem;
+      line-height: 3.1rem;;
+
+      > svg {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    &__contacts-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 6rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+
+      > *:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      > a {
+        position: relative;
+        width: fit-content;
+
+        &:before {
+          height: 1px;
+        }
+      }
+    }
+  }
+}

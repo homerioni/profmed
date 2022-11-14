@@ -1,0 +1,156 @@
+.consultation {
+  position: relative;
+  margin-bottom: 16rem;
+
+  &__text-block {
+    width: 90rem;
+  }
+
+  &__sub-title {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $blue;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -16.4rem;
+      top: calc(100% + 0.6rem);
+      width: 20.7rem;
+      height: 2px;
+      background-color: #BFDDFF;
+    }
+  }
+
+  &__text-content {
+    padding-left: 5.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $gray;
+  }
+
+  &__list {
+    margin-bottom: 3.2rem;
+  }
+
+  &__list-item {
+    list-style-type: disc;
+    margin-left: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $gray;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__btn {
+  }
+
+  &__img-box {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 68rem;
+    height: 45.5rem;
+    transform: translateY(-50%);
+    border-radius: 100rem 0 0 100rem;
+    background-color: #D3E8FF;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+    }
+
+    &--no-bg {
+      > img {
+        height: 110%;
+        transform: translateY(-5%);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .consultation {
+    margin-bottom: 20rem;
+
+    &__text-block {
+      width: 100%;
+      margin-bottom: 8rem;
+    }
+
+    &__sub-title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 6rem;
+      line-height: 8rem;
+
+      &:before {
+        left: -4rem;
+        top: calc(100% + 1.2rem);
+        width: 10.4rem;
+        height: 1px;
+      }
+    }
+
+    &__text-content {
+      padding-left: 0;
+    }
+
+    &__text {
+      margin-bottom: 2.4rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__list {
+      margin-bottom: 8rem;
+    }
+
+    &__list-item {
+      margin-left: 3rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__btn {
+    }
+
+    &__img-box {
+      position: static;
+      width: 68rem;
+      height: 45.5rem;
+      transform: translateY(0);
+      border-radius: 0 100rem 100rem 0;
+    }
+  }
+}

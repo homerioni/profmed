@@ -1,0 +1,60 @@
+.sidebar-call {
+  padding: 4rem;
+  border-radius: 2.5rem;
+  background-color: $white;
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(30, 135, 250, 0.07);
+
+  &__text {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+
+  &__phone-box {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: $blue;
+  }
+
+  &__phone-icon {
+    flex: none;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: 2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .sidebar-call {
+    padding: 5.6rem 4rem;
+    border-radius: 3rem;
+    box-shadow: 0 1rem 3rem 0 rgba(30, 135, 250, 0.07);
+
+    &__text {
+      margin-bottom: 4rem;
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
+
+    &__phone-box {
+      font-size: 3.6rem;
+      line-height: 4.4rem;
+    }
+
+    &__phone-icon {
+      width: 8rem;
+      height: 8rem;
+      margin-right: 2.4rem;
+    }
+  }
+}

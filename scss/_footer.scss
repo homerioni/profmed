@@ -1,0 +1,272 @@
+@import "param";
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 59.9rem;
+
+  @media (max-width: 48em) {
+    padding-bottom: 0;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -3px 1.2rem rgba(30, 135, 250, 0.04);
+  background-color: $white;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0 2rem 0;
+
+    &--contacts {
+      align-items: center;
+      padding: 2.8rem 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -16.4rem;
+        top: 0;
+        width: 100vw;
+        height: 2px;
+        background-color: #F1F6FF;
+      }
+    }
+  }
+
+  &__box {
+    width: 35.6rem;
+  }
+
+  &__logo {
+    display: block;
+    width: 13.6rem;
+    height: 3.5rem;
+    margin-bottom: 3.2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__list-box {
+    margin-top: 3.2rem;
+  }
+
+  &__list-title {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    &:hover {
+      color: $blue-hover;
+    }
+  }
+
+  &__list-item {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.1rem;
+    }
+
+    &:hover {
+      color: $blue-hover;
+    }
+  }
+
+  &__phone-box {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  &__phone-icon {
+    flex: none;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: 2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: $blue;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__social {
+    display: block;
+    width: 4.2rem;
+    height: 4.2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .footer {
+    position: static;
+    box-shadow: none;
+    border-radius: 3rem 3rem 0 0;
+
+    &__container {
+      display: block;
+      padding: 4.8rem 4rem;
+
+      &--contacts {
+        padding: 4.8rem 4rem 12rem 4rem;
+        border-top: 1px solid #F1F6FF;
+        text-align: center;
+      }
+    }
+
+    &__box {
+      width: 100%;
+    }
+
+    &__logo {
+      width: 31.4rem;
+      height: 8rem;
+      margin-bottom: 8rem;
+    }
+
+    &__link {
+      margin-bottom: 5rem;
+      font-size: 3.6rem;
+      line-height: 4.4rem;
+    }
+
+    &__list-box {
+      margin-top: 5rem;
+    }
+
+    &__list-title {
+      display: block;
+      margin-bottom: 5rem;
+      font-weight: 500;
+      font-size: 3.6rem;
+      line-height: 4.4rem;
+      color: $def-color;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > svg {
+          flex: none;
+          width: 3.8rem;
+          height: 2.2rem;
+          transition: transform .25s ease;
+
+          path {
+            stroke: $def-color;
+          }
+        }
+      }
+
+      &.active {
+        color: $blue;
+
+        > a > svg {
+          transform: scaleY(-1);
+
+          path {
+            stroke: $blue;
+          }
+        }
+      }
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__list-item {
+      font-weight: 500;
+      font-size: 3.6rem;
+      line-height: 4.4rem;
+      color: $gray;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__phone-box {
+      justify-content: center;
+      margin-bottom: 4.8rem;
+    }
+
+    &__phone-icon {
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-right: 2.4rem;
+    }
+
+    &__phone {
+      font-size: 3.6rem;
+    }
+
+    &__socials-text {
+      margin-bottom: 4rem;
+      font-weight: 500;
+      font-size: 2.6rem;
+      color: $gray;
+    }
+
+    &__socials {
+      justify-content: center;
+      gap: 5.2rem;
+    }
+
+    &__social {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
+}

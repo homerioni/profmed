@@ -1,0 +1,240 @@
+.min-clear {
+  margin-bottom: 16rem;
+
+  &__title {
+    margin-bottom: 7rem;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__item {
+    width: 39.8rem;
+  }
+
+  &__image-block {
+    width: 44.2rem;
+    height: 44.2rem;
+    padding: 1.2rem;
+    transform: translateX(-2.2rem);
+    margin-bottom: 3.2rem;
+    border-radius: 100%;
+    background-color: $white;
+    box-shadow: 0 1rem 3.4rem 0 #1E87FA33;
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__question-box {
+    position: absolute;
+    left: 50%;
+    bottom: 2.4rem;
+    transform: translateX(-50%);
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.4rem;
+    border-radius: 100%;
+    background-color: $white;
+    cursor: pointer;
+
+    &:hover {
+      .min-clear__question-text {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__question-icon {
+    width: 100%;
+    height: 100%;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__question-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 2rem);
+    z-index: 5;
+    width: 38rem;
+    transform: translateX(-50%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: $white;
+    box-shadow: 0 0.5rem 1.5rem 0 #1E87FA12;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: $gray;
+    transition: opacity .3s ease;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border: 0.6rem solid transparent;
+      border-right: 1rem solid white;
+      border-bottom: 1rem solid white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 40%;
+      height: 4rem;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item-sub-title {
+    width: 28.4rem;
+    margin: 0 auto 1.6rem auto;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: $blue;
+  }
+
+  &__item-title {
+    width: 28.4rem;
+    margin: 0 auto 1.6rem auto;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+  }
+
+  &__item-desc {
+    width: 29rem;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: $gray;
+  }
+}
+
+@media (max-width: 48em) {
+  .min-clear {
+    margin-bottom: 20rem;
+
+    &__title {
+      margin-bottom: 8rem;
+      font-size: 6rem;
+      line-height: 8rem;
+      text-align: left;
+    }
+
+    &__content {
+      flex-direction: row;
+      margin: 0 -4rem;
+      padding: 0 4rem;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &__item {
+      flex: none;
+      width: 45rem;
+    }
+
+    &__image-block {
+      width: 49.2rem;
+      height: 49.2rem;
+      padding: 0.8rem;
+      margin-bottom: 4rem;
+      box-shadow: 0 2rem 6.8rem 0 #1E87FA33;
+    }
+
+    &__img-box {
+    }
+
+    &__question-box {
+      width: 6.4rem;
+      height: 6.4rem;
+      padding: 0.8rem;
+    }
+
+    &__question-icon {
+    }
+
+    &__question-text {
+      bottom: calc(100% + 4rem);
+      width: 42rem;
+      padding: 2.4rem;
+      border-radius: 3rem;
+      box-shadow: 0 1rem 3rem 0 #1E87FA12;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        border: 1.2rem solid transparent;
+        border-right: 2rem solid white;
+        border-bottom: 2rem solid white;
+      }
+
+      &:after {
+        height: 8rem;
+      }
+    }
+
+    &__item-sub-title {
+      width: 38rem;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+    }
+
+    &__item-title {
+      width: 38rem;
+      margin-bottom: 2.4rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__item-desc {
+      width: 38rem;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+    }
+  }
+}

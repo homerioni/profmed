@@ -1,0 +1,146 @@
+.licenses {
+  margin-bottom: 16rem;
+
+  &--page {
+    .licenses__title {
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-block {
+    flex: none;
+    width: 40.4rem;
+    margin-right: 13rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+  }
+
+  &__desc {
+    margin-bottom: 2.8rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $gray;
+  }
+
+  &__cards {
+    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+  }
+
+  &__item {
+    position: relative;
+    width: 24.6rem;
+    height: 34.2rem;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem 0 #1E87FA12;
+    cursor: pointer;
+    transition: transform .3s ease;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__zoom {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background-color: $blue;
+
+    > svg {
+      width: 3.6rem;
+      height: 3.6rem;
+
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .licenses {
+    margin-bottom: 20rem;
+
+    &--page {
+      .licenses__cards {
+        margin-bottom: 12rem;
+      }
+    }
+
+    &__container {
+      display: block;
+    }
+
+    &__text-block {
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 6rem;
+      line-height: 8rem;
+    }
+
+    &__desc {
+      margin-bottom: 8rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 0;
+      row-gap: 4rem;
+      width: 100%;
+      margin-bottom: 8rem;
+    }
+
+    &__item {
+      width: 31.6rem;
+      height: 44.8rem;
+      padding: 0.8rem;
+      border-radius: 3rem;
+      box-shadow: 0 1rem 3rem 0 #1E87FA12;
+    }
+
+    &__zoom {
+      right: 1.6rem;
+      bottom: 1.6rem;
+      width: 6.4rem;
+      height: 6.4rem;
+
+      > svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
