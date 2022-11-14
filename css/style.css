@@ -6206,6 +6206,8 @@ body {
 
 .modal-licenses__content {
   height: 80%;
+  min-width: auto;
+  min-height: auto;
   padding: 0;
   background-color: transparent;
 }
@@ -6228,6 +6230,8 @@ body {
   height: 100%;
 }
 .modal-licenses__item > img {
+  position: relative;
+  z-index: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -6247,7 +6251,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
 }

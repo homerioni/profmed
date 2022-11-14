@@ -253,6 +253,8 @@
 .modal-licenses {
   &__content {
     height: 80%;
+    min-width: auto;
+    min-height: auto;
     padding: 0;
     background-color: transparent;
   }
@@ -270,6 +272,8 @@
     height: 100%;
 
     > img {
+      position: relative;
+      z-index: 1;
       width: fit-content;
       max-width: 100%;
       max-height: 100%;
@@ -287,7 +291,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
     width: 100%;
     height: 100%;
   }
