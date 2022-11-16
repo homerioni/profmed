@@ -78,6 +78,7 @@
   }
 
   &__img-box {
+    position: relative;
     width: 106rem;
     height: 67.6rem;
     border-radius: 2.5rem 0 0 2.5rem;
@@ -147,6 +148,33 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
     color: $gray;
+  }
+
+  &__video-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16.6rem;
+    height: 16.6rem;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem 0 #1E87FA12;
+    transition: box-shadow .3s ease;
+
+    > img {
+      width: 122%;
+      height: 122%;
+      transform: translateY(0.2rem);
+      object-fit: contain;
+    }
+
+    &:hover {
+      box-shadow: 0 0.5rem 1.5rem 0 rgba(30, 135, 250, 0.3);
+    }
   }
 }
 
@@ -261,6 +289,21 @@
     &__card-text {
       font-size: 3rem;
       line-height: 3.6rem;
+    }
+
+    &__video-btn {
+      position: absolute;
+      left: 3rem;
+      top: auto;
+      bottom: 2rem;
+      transform: none;
+      width: 12rem;
+      height: 12rem;
+      box-shadow: 0 1rem 3rem 0 #1E87FA12;
+
+      &:hover {
+        box-shadow: 0 1rem 3rem 0 rgba(30, 135, 250, 0.3);
+      }
     }
   }
 }

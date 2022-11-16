@@ -101,6 +101,12 @@ $(document).ready(function () {
         $('.modal-licenses').css('display', 'flex').hide().fadeIn();
     });
 
+    // Modal intro
+    $('.popup-intro').click(function () {
+        $('body').addClass('lock');
+        $('.modal-intro').css('display', 'flex').hide().fadeIn();
+    });
+
     // Header
     $('.header__menu-item').children('.sub-list').click(function (e) {
         if ($(window).width() <= 768) {
