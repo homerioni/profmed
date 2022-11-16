@@ -12,7 +12,7 @@ ymaps.ready(function () {
         ),
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            balloonContent: 'Sanuvox'
+            balloonContent: 'Профмед'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -20,10 +20,10 @@ ymaps.ready(function () {
             // Своё изображение иконки метки.
             iconImageHref: 'img/mapPin.svg',
             // Размеры метки.
-            iconImageSize: [rem(6.4), rem(6.4)],
+            iconImageSize: [rem(2.3), rem(2.9)],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [rem(-3), rem(-6)]
+            iconImageOffset: [rem(-1.1), rem(-2.7)]
         });
 
     myMap.geoObjects.add(myPlacemark);

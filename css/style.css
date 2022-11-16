@@ -1024,6 +1024,9 @@ body {
     border-top: 1px solid #F1F6FF;
     text-align: center;
   }
+  .footer__container--contacts:before {
+    left: 0;
+  }
   .footer__box {
     width: 100%;
   }
@@ -1033,7 +1036,8 @@ body {
     margin-bottom: 8rem;
   }
   .footer__link {
-    margin-bottom: 5rem;
+    margin-bottom: 0;
+    margin-top: 5rem;
     font-size: 3.6rem;
     line-height: 4.4rem;
   }
@@ -1488,8 +1492,7 @@ body {
 }
 
 .treatment {
-  padding-top: 4.2rem;
-  padding-bottom: 16rem;
+  margin-bottom: 16rem;
 }
 .treatment__card-list {
   margin-bottom: 17.2rem;
@@ -1666,8 +1669,7 @@ body {
 }
 @media (max-width: 48em) {
   .treatment {
-    padding-top: 8rem;
-    padding-bottom: 20rem;
+    margin-bottom: 20rem;
   }
   .treatment__card-list__container {
     overflow-x: scroll;
@@ -1936,7 +1938,7 @@ body {
 .intro__slider-nav {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -0.5rem;
   z-index: 1;
   padding: 4rem 2.8rem;
   border-radius: 1.5rem 0 0 0;
@@ -2064,7 +2066,7 @@ body {
   }
   .intro__slider-nav {
     bottom: auto;
-    top: 37.4rem;
+    top: 38rem;
     padding: 4rem;
     border-radius: 3rem 0 0 0;
   }

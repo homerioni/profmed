@@ -94,7 +94,7 @@
   &__slider-nav {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -0.5rem;
     z-index: 1;
     padding: 4rem 2.8rem;
     border-radius: 1.5rem 0 0 0;
@@ -228,7 +228,7 @@
 
     &__slider-nav {
       bottom: auto;
-      top: 37.4rem;
+      top: 38rem;
       padding: 4rem;
       border-radius: 3rem 0 0 0;
     }
