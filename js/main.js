@@ -107,6 +107,25 @@ $(document).ready(function () {
         $('.modal-intro').css('display', 'flex').hide().fadeIn();
     });
 
+    // Modal add comment
+    $('.add-comment').click(function () {
+        $('body').addClass('lock');
+        $('.modal-add-comment').css('display', 'flex').hide().fadeIn();
+    });
+    $('.modal-add-comment .close').click(function () {
+        setTimeout(() => {
+            $('.modal-add-comment input').val('');
+            $('.modal-add-comment__form').show();
+            $('.modal-add-comment__complete').hide();
+            $('.modal-add-comment .modal-add-comment__label input[required]').parent().removeClass('error').removeClass('ok');
+        }, 300);
+    });
+    $('.modal-add-comment__rating svg').click(function () {
+        $(this).parent().find('svg').removeClass('active');
+        $(this).parent().find('svg:nth-child(-n +'+ ($(this).index() + 1) +')').addClass('active');
+        $('.modal-add-comment__rating-input').val($(this).index() + 1);
+    });
+
     // Header
     $('.header__menu-item').children('.sub-list').click(function (e) {
         if ($(window).width() <= 768) {

@@ -1,0 +1,172 @@
+.others {
+    padding-bottom: 16rem;
+
+    &__heading {
+        margin-bottom: 7rem;
+        font-weight: 500;
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+    }
+
+    &__list {
+        &__item {
+            padding: 1.2rem 4rem 1.2rem 1.2rem;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            background-color: #FDFEFF;
+            border-radius: 2.5rem;
+            filter: drop-shadow(0px 5px 15px rgba(30, 135, 250, 0.07));
+
+            &:not(:last-child) {
+                margin-bottom: 2.4rem;
+            }
+
+            &-img {
+                margin-right: 4rem;
+                width: 63.6rem;
+                height: auto;
+                object-fit: contain;
+                border-radius: inherit;
+            }
+
+            &-right {
+                margin-top: 2.8rem;
+
+                &-subtitle {
+                    margin-bottom: 1.6rem;
+                    font-weight: 500;
+                    font-size: 2.4rem;
+                    line-height: 2.9rem;
+                    color: $blue;
+                }
+
+                &-title {
+                    margin-bottom: 2rem;
+                    font-weight: 500;
+                    font-size: 4.5rem;
+                    line-height: 5.5rem;
+                }
+
+                &-description {
+                    margin-bottom: 2rem;
+                    font-weight: 500;
+                    font-size: 2.4rem;
+                    line-height: 2.9rem;
+                    color: $gray;
+                }
+
+                &-author {
+                    display: flex;
+                    align-items: center;
+
+                    &-img {
+                        margin-right: 2rem;
+                        width: 9.9rem;
+                        height: 9.9rem;
+                        border-radius: 50%;
+                    }
+
+                    &-name {
+                        margin-bottom: .8rem;
+                        font-weight: 500;
+                        font-size: 2.4rem;
+                        line-height: 2.9rem;
+                    }
+
+                    &-post {
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                        color: $gray;
+                    }
+                }
+
+                &-link {
+                    position: absolute;
+                    right: 4rem;
+                    bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 20rem;
+
+        &__heading {
+            margin-bottom: 8rem;
+            font-size: 6rem;
+            line-height: 8rem;
+        }
+
+        &__list {
+            &__item {
+                padding: .8rem .8rem 6rem .8rem;
+                flex-direction: column;
+
+                &:not(:last-child) {
+                    margin-bottom: 4rem;
+                }
+
+                &-img {
+                    margin-right: 0;
+                    margin-bottom: 5.6rem;
+                    width: 100%;
+                }
+
+                &-right {
+                    margin-top: 0;
+                    padding-left: 3.2rem;
+                    padding-right: 3.2rem;
+
+                    &-subtitle {
+                        margin-bottom: 1.6rem;
+                        font-size: 3rem;
+                        line-height: 3.6rem;
+                    }
+
+                    &-title {
+                        margin-bottom: 4rem;
+                        width: 44rem;
+                        font-size: 6rem;
+                        line-height: 8rem;
+                    }
+
+                    &-description {
+                        margin-bottom: 4rem;
+                        font-size: 3rem;
+                        line-height: 3.6rem;
+                    }
+
+                    &-author {
+                        margin-bottom: 8rem;
+
+                        &-img {
+                            margin-right: 2.4rem;
+                            width: 11.6rem;
+                            height: 11.6rem;
+                        }
+
+                        &-name {
+                            font-size: 3rem;
+                            line-height: 3.6rem;
+                        }
+
+                        &-post {
+                            font-size: 2.6rem;
+                            line-height: 3.2rem;
+                        }
+                    }
+
+                    &-link {
+                        position: relative;
+                        right: auto;
+                        bottom: auto;
+                    }
+                }
+            }
+        }
+    }
+}
