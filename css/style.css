@@ -1033,7 +1033,7 @@ body {
   .footer__logo {
     width: 31.4rem;
     height: 8rem;
-    margin-bottom: 8rem;
+    margin: 0 auto 8rem auto;
   }
   .footer__link {
     margin-bottom: 0;
@@ -1539,8 +1539,8 @@ body {
 .treatment__card-list__item:hover {
   -webkit-transform: translateY(-1.8rem);
           transform: translateY(-1.8rem);
-  -webkit-box-shadow: 0px 5px 15px rgba(30, 135, 250, 0.07);
-          box-shadow: 0px 5px 15px rgba(30, 135, 250, 0.07);
+  -webkit-box-shadow: 0px 10px 34px 0px rgba(30, 135, 250, 0.2);
+          box-shadow: 0px 10px 34px 0px rgba(30, 135, 250, 0.2);
 }
 .treatment__card-list__item:active, .treatment__card-list__item.active {
   -webkit-transition-duration: 0s;
@@ -1583,7 +1583,7 @@ body {
 .treatment__article-list {
   margin-bottom: 7rem;
 }
-.treatment__article-list__item {
+.treatment__article-list__item > a {
   padding: 1.2rem 4rem 1.2rem 1.2rem;
   width: 100%;
   position: relative;
@@ -1683,7 +1683,7 @@ body {
     width: 0;
   }
   .treatment__card-list {
-    margin-bottom: 20.8rem;
+    margin-bottom: 0;
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
@@ -1727,7 +1727,7 @@ body {
   .treatment__article-list {
     margin-bottom: 8.2rem;
   }
-  .treatment__article-list__item {
+  .treatment__article-list__item > a {
     padding: 0.8rem 0.8rem 6rem 0.8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2597,7 +2597,7 @@ body {
   font-size: 4.5rem;
   line-height: 5.5rem;
 }
-.others__list__item {
+.others__list__item > a {
   padding: 1.2rem 4rem 1.2rem 1.2rem;
   width: 100%;
   position: relative;
@@ -2686,7 +2686,7 @@ body {
     font-size: 6rem;
     line-height: 8rem;
   }
-  .others__list__item {
+  .others__list__item > a {
     padding: 0.8rem 0.8rem 6rem 0.8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3247,6 +3247,7 @@ body {
   margin-bottom: 5.2rem;
 }
 .services__sub-item {
+  position: relative;
   list-style-type: disc;
   margin-left: 1.8rem;
   font-weight: 500;
@@ -3255,6 +3256,9 @@ body {
 }
 .services__sub-item:not(:last-child) {
   margin-bottom: 1.6rem;
+}
+.services__sub-item:hover {
+  text-decoration: underline;
 }
 .services__item-link {
   margin-top: auto;
@@ -7270,8 +7274,11 @@ body {
   line-height: 1.9rem;
   color: #7C91B1;
 }
-.modal-request__desc .underline {
+.modal-request__desc a {
   text-decoration: underline;
+}
+.modal-request__desc a:hover {
+  text-decoration: none;
 }
 .modal-request__complete {
   display: none;
@@ -7834,6 +7841,46 @@ body {
   display: none;
 }
 
+.modal-form-complete {
+  text-align: center;
+}
+.modal-form-complete__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 58rem;
+}
+.modal-form-complete__title {
+  margin: 0 auto 0.8rem auto;
+  font-weight: 500;
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+}
+.modal-form-complete__title--blue {
+  color: #1E87FA;
+}
+.modal-form-complete__text {
+  margin-bottom: 6rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+.modal-form-complete__btn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 2.4rem 6.4rem;
+}
+
 @media (max-width: 48em) {
   .modal {
     padding: 0 4rem;
@@ -7907,6 +7954,23 @@ body {
     margin-bottom: 8rem;
     font-size: 3.6rem;
     line-height: 4.4rem;
+  }
+  .modal-form-complete__content {
+    min-height: auto;
+  }
+  .modal-form-complete__title {
+    margin-bottom: 2.4rem;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+  .modal-form-complete__text {
+    margin-bottom: 8rem;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+  }
+  .modal-form-complete__btn {
+    margin: 0 0 4rem 0;
+    padding: 4rem 4.8rem;
   }
   .modal-help {
     text-align: left;

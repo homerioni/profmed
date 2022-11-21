@@ -200,13 +200,18 @@ $(document).ready(function () {
         $('body').addClass('lock');
         $('.modal-reviews').css('display', 'flex').hide().fadeIn();
     });
+    $('.reviews__ya-link').click(function (e) {
+        e.stopPropagation();
+    });
 
     // Map
     $('.map__form .button').click(function () {
+        let reqInput = true;
         $('.map__label input[required]').each(function () {
             if ($(this).val()) {
                 $(this).parent().removeClass('error').addClass('ok');
             } else {
+                reqInput = false;
                 if ($(this).hasClass('mask-phone')) {
                     $(this).attr('placeholder', '+7 (495) 641-64-64').parent().addClass('error').removeClass('ok');
                 } else {
@@ -214,6 +219,10 @@ $(document).ready(function () {
                 }
             }
         });
+        if (reqInput) {
+            $('.modal-form-complete').css('display', 'flex').hide().fadeIn();
+            $('.map__label input').val('').parent().removeClass('error').removeClass('ok');
+        }
     });
     $('.map__label input[required]').change(function () {
         if ($(this).val()) {

@@ -10,14 +10,16 @@
 
     &__list {
         &__item {
-            padding: 1.2rem 4rem 1.2rem 1.2rem;
-            width: 100%;
-            position: relative;
-            display: flex;
-            align-items: flex-start;
-            background-color: #FDFEFF;
-            border-radius: 2.5rem;
-            filter: drop-shadow(0px 5px 15px rgba(30, 135, 250, 0.07));
+            > a {
+                padding: 1.2rem 4rem 1.2rem 1.2rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                background-color: #FDFEFF;
+                border-radius: 2.5rem;
+                filter: drop-shadow(0px 5px 15px rgba(30, 135, 250, 0.07));
+            }
 
             &:not(:last-child) {
                 margin-bottom: 2.4rem;
@@ -103,8 +105,10 @@
 
         &__list {
             &__item {
-                padding: .8rem .8rem 6rem .8rem;
-                flex-direction: column;
+                > a {
+                    padding: .8rem .8rem 6rem .8rem;
+                    flex-direction: column;
+                }
 
                 &:not(:last-child) {
                     margin-bottom: 4rem;

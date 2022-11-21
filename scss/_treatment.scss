@@ -23,7 +23,7 @@
 
             &:hover {
                 transform: translateY(-1.8rem);
-                box-shadow: 0px 5px 15px rgba(30, 135, 250, 0.07);
+                box-shadow: 0px 10px 34px 0px #1E87FA33;
             }
 
             &:active,
@@ -75,14 +75,16 @@
         margin-bottom: 7rem;
 
         &__item {
-            padding: 1.2rem 4rem 1.2rem 1.2rem;
-            width: 100%;
-            position: relative;
-            display: flex;
-            align-items: flex-start;
-            background-color: #FDFEFF;
-            border-radius: 2.5rem;
-            filter: drop-shadow(0px 5px 15px rgba(30, 135, 250, 0.07));
+            > a {
+                padding: 1.2rem 4rem 1.2rem 1.2rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                background-color: #FDFEFF;
+                border-radius: 2.5rem;
+                filter: drop-shadow(0px 5px 15px rgba(30, 135, 250, 0.07));
+            }
 
             &:not(:last-child) {
                 margin-bottom: 2rem;
@@ -178,7 +180,7 @@
         }
 
         &__card-list {
-            margin-bottom: 20.8rem;
+            margin-bottom: 0;
             justify-content: unset;
 
             &__item {
@@ -226,8 +228,10 @@
             margin-bottom: 8.2rem;
 
             &__item {
-                padding: .8rem .8rem 6rem .8rem;
-                flex-direction: column;
+                > a {
+                    padding: .8rem .8rem 6rem .8rem;
+                    flex-direction: column;
+                }
 
                 &:not(:last-child) {
                     margin-bottom: 4.8rem;
