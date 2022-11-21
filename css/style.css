@@ -527,15 +527,21 @@ body {
           justify-content: center;
   width: 4.2rem;
   height: 4.2rem;
-  border: 2px solid #1E87FA;
+  border: 1px solid #1E87FA;
   border-radius: 100%;
+  cursor: pointer;
 }
 .header__phone-icon > svg {
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 .header__phone-icon > svg path {
   stroke: #1E87FA;
+}
+@media (min-width: 48.01em) {
+  .header__phone-icon:hover > svg path {
+    fill: #1E87FA;
+  }
 }
 
 @media (max-width: 48em) {
@@ -882,9 +888,9 @@ body {
   -webkit-box-shadow: 0 -3px 1.2rem rgba(30, 135, 250, 0.04);
           box-shadow: 0 -3px 1.2rem rgba(30, 135, 250, 0.04);
   background-color: #FDFEFF;
+  overflow: hidden;
 }
 .footer__container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -902,9 +908,9 @@ body {
 .footer__container--contacts:before {
   content: "";
   position: absolute;
-  left: -16.4rem;
-  top: 0;
-  width: 100vw;
+  left: 0;
+  bottom: 9.8rem;
+  width: 100%;
   height: 2px;
   background-color: #F1F6FF;
 }
@@ -7317,7 +7323,7 @@ body {
 .modal-reviews__slider {
   width: 100%;
   margin-bottom: 3.2rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 .modal-reviews__slider .reviews__item {
