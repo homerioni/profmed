@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     // Modal
     $('.modal .close').click(function () {
-        $('body').removeClass('lock');
+        $('body').removeClass('lock').css('width', 'auto');
         $(this).parents('.modal').fadeOut();
     });
     $('.form-btn').click(function () {
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     // Modal request
     $('.popup-request').click(function () {
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-request').css('display', 'flex').hide().fadeIn();
     });
     $('.modal-request .close').click(function () {
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     // Modal help
     $('.popup-help').click(function () {
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-help').css('display', 'flex').hide().fadeIn();
     });
     $('.modal-help .close').click(function () {
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     // Modal new review
     $('.add-review').click(function () {
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-new-review').css('display', 'flex').hide().fadeIn();
     });
     $('.modal-new-review .close').click(function () {
@@ -97,19 +97,19 @@ $(document).ready(function () {
     // Modal licenses
     $('.licenses__item').click(function () {
         licenses_modal_slider.slideTo($(this).index() + 1);
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-licenses').css('display', 'flex').hide().fadeIn();
     });
 
     // Modal intro
     $('.popup-intro').click(function () {
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-intro').css('display', 'flex').hide().fadeIn();
     });
 
     // Modal add comment
     $('.add-comment').click(function () {
-        $('body').addClass('lock');
+        $('body').css('width', $('body').width()).addClass('lock');
         $('.modal-add-comment').css('display', 'flex').hide().fadeIn();
     });
     $('.modal-add-comment .close').click(function () {
