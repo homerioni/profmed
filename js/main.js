@@ -139,8 +139,10 @@ $(document).ready(function () {
             e.preventDefault();
             if ($(this).parent().hasClass('active')) {
                 setTimeout(() => $(this).parent().css('z-index', '0'), 200);
+                $(this).parent().css('transform', 'translateY(0)');
             } else {
                 $(this).parent().css('z-index', '1');
+                $(this).parent().css('transform', 'translateY(calc(-' + $(this).parent().position().top + 'px)');
             }
             let subList = $(this).parent().children('.header__menu-sub-list');
             if (subList.height() < $('.header__menu-list').height()) {
@@ -149,7 +151,6 @@ $(document).ready(function () {
             $(this).parent().toggleClass('active')
                 .children('.header__menu-sub-list').slideToggle(200);
             $('.header__contacts.mobile').fadeToggle(200);
-            $(this).parent().css('transform', 'translateY(calc(-' + $(this).parent().position().top + 'px)');
         }
     });
     $('.header__menu-sub-list .sub-list').click(function (e) {
