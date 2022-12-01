@@ -204,9 +204,9 @@ $(document).ready(function () {
         $(this).find('svg:nth-child(-n + '+ $(this).parents('.reviews__item').attr('rating') +')').addClass('active');
     });
     $('.reviews__item:not(.modal-reviews .reviews__item)').click(function () {
-        reviews_modal_slider.slideTo($(this).attr('number'));
         $('body').addClass('lock');
         $('.modal-reviews').css('display', 'flex').hide().fadeIn();
+        reviews_modal_slider.slideTo($(this).attr('number'), 0);
     });
     $('.reviews__ya-link').click(function (e) {
         e.stopPropagation();
