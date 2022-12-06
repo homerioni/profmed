@@ -117,16 +117,6 @@ $(document).ready(function () {
         document.querySelector('.modal-intro iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     });
 
-    // close.click(function () {
-    //     let iframe = $('.modalVideo__iframe');
-    //
-    //     $('body').css('overflow', 'visible');
-    //     modal.css({display: 'none', opacity: '0'});
-    //     $(".modalVideo__item")
-    //         .find(iframe)[0].contentWindow
-    //         .postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-    // });
-
     // Modal add comment
     $('.add-comment').click(function () {
         $('body').width($('body').width()).addClass('lock');
