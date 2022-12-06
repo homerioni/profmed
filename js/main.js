@@ -112,6 +112,20 @@ $(document).ready(function () {
         $('header').width($('body').width());
         $('.modal-intro').css('display', 'flex').hide().fadeIn();
     });
+    $('.modal-intro iframe').attr('src', $('.modal-intro iframe').attr('src') + '?enablejsapi=1');
+    $('.modal-intro .close').click(function () {
+        document.querySelector('.modal-intro iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+
+    // close.click(function () {
+    //     let iframe = $('.modalVideo__iframe');
+    //
+    //     $('body').css('overflow', 'visible');
+    //     modal.css({display: 'none', opacity: '0'});
+    //     $(".modalVideo__item")
+    //         .find(iframe)[0].contentWindow
+    //         .postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    // });
 
     // Modal add comment
     $('.add-comment').click(function () {
