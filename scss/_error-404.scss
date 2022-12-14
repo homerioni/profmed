@@ -1,0 +1,145 @@
+.error-404 {
+  margin-bottom: 16rem;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text-block {
+    width: 65.2rem;
+  }
+
+  &__sub-title {
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $blue;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 5.5rem;
+    line-height: 6.7rem;
+
+    > sup {
+      position: relative;
+      top: -0.5rem;
+      font-weight: 700;
+      font-size: 2.6rem;
+      line-height: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -16.4rem;
+      top: calc(100% + 0.6rem);
+      width: 20.8rem;
+      height: 2px;
+      background-color: #BFDDFF;
+    }
+  }
+
+  &__text-content {
+    padding-left: 5.6rem;
+  }
+
+  &__text {
+    margin-bottom: 6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  &__btn {
+    margin-bottom: 3.2rem;
+  }
+
+  &__link {
+  }
+
+  &__img-box {
+    position: relative;
+    width: 106rem;
+    height: 67.6rem;
+    border-radius: 2.5rem 0 0 2.5rem;
+    margin-right: -16.4rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .error-404 {
+    margin-bottom: 20rem;
+    margin-top: -4rem;
+
+    &__content {
+      flex-direction: column;
+      justify-content: normal;
+    }
+
+    &__text-block {
+      order: 2;
+      width: 100%;
+    }
+
+    &__sub-title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 6rem;
+      line-height: 8rem;
+
+      > sup {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 1;
+      }
+
+      &:before {
+        left: -4rem;
+        top: calc(100% + 1.2rem);
+        width: 10.4rem;
+        height: 1px;
+      }
+    }
+
+    &__text-content {
+      padding-left: 4.8rem;
+    }
+
+    &__text {
+      margin-bottom: 8rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__btn {
+      margin-bottom: 4rem;
+    }
+
+    &__link {
+    }
+
+    &__img-box {
+      width: calc(100% + 8rem);
+      height: 48.6rem;
+      border-radius: 0 0 3rem 3rem;
+      margin: 0 0 8rem 0;
+    }
+  }
+}
