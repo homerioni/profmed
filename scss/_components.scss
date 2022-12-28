@@ -116,6 +116,44 @@
   margin-bottom: 7rem;
 }
 
+.breadcrumbs {
+  position: absolute;
+  left: 16.4rem;
+  top: 12.5rem;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  width: fit-content;
+  max-width: 68rem;
+
+  &__item {
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $gray;
+
+    &:not(:last-child) {
+      &:after {
+        content: '/';
+        position: absolute;
+        left: calc(100% + 0.4rem);
+        bottom: 0;
+      }
+    }
+
+    &.active {
+      color: $def-color;
+      cursor: default;
+    }
+
+    &:hover {
+      color: $def-color;
+      text-decoration: underline;
+    }
+  }
+}
+
 @media (max-width: 48em) {
   .button {
     padding: 4rem 5.6rem;
@@ -156,5 +194,40 @@
 
   .back-link {
     margin-bottom: 8rem;
+  }
+
+  .breadcrumbs {
+    left: 4rem;
+    top: 18rem;
+    gap: 2rem;
+    max-width: 67rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.13);
+      filter: blur(0.8rem);
+    }
+
+    &__item {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      color: white;
+
+      &:not(:last-child) {
+        &:after {
+          content: '-';
+        }
+      }
+
+      &.active,
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
