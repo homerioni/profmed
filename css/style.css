@@ -1402,35 +1402,38 @@ body {
           justify-content: space-between;
 }
 .post-treatment__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
   width: 100.6rem;
-}
-.post-treatment__left__heading {
-  margin-bottom: 2rem;
-  font-weight: 500;
-  font-size: 4.5rem;
-  line-height: 5.5rem;
-}
-.post-treatment__left__description {
-  margin-bottom: 1.6rem;
-  font-weight: 400;
   font-size: 2rem;
   line-height: 2.4rem;
 }
-.post-treatment__left__description .blue {
+.post-treatment__left .blue {
   color: #1E87FA;
 }
-.post-treatment__left__list-heading {
-  margin-top: 0.4rem;
-  margin-bottom: 1.6rem;
+.post-treatment__left h2 {
   font-weight: 500;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  color: #1E87FA;
+  font-size: 3rem;
+  line-height: 3.6rem;
 }
-.post-treatment__left__list {
+.post-treatment__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
   width: 79rem;
 }
-.post-treatment__left__list-item {
+.post-treatment__left ul li {
   margin-left: 1em;
   font-weight: 400;
   font-size: 2rem;
@@ -1438,8 +1441,11 @@ body {
   list-style: inside;
   list-style-position: outside;
 }
-.post-treatment__left__list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
+.post-treatment__left__heading {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 4.5rem;
+  line-height: 5.5rem;
 }
 .post-treatment__right {
   width: 51.5rem;
@@ -1503,28 +1509,25 @@ body {
             justify-content: flex-start;
   }
   .post-treatment__left {
+    gap: 3rem;
     margin-bottom: 12rem;
     width: 100%;
+    font-size: 3rem;
+    line-height: 3.6rem;
   }
   .post-treatment__left__heading {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     font-size: 6rem;
     line-height: 8rem;
   }
-  .post-treatment__left__description {
-    font-size: 3rem;
-    line-height: 3.6rem;
+  .post-treatment__left h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
   }
-  .post-treatment__left__list-heading {
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
-    font-size: 3rem;
-    line-height: 3.6rem;
-  }
-  .post-treatment__left__list {
+  .post-treatment__left ul {
     width: 100%;
   }
-  .post-treatment__left__list-item {
+  .post-treatment__left ul li {
     font-size: 3rem;
     line-height: 3.6rem;
   }
@@ -2882,6 +2885,9 @@ body {
   margin-bottom: 16rem;
 }
 .intro__slider {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 0 16.4rem;
   margin-bottom: 6rem;
 }
