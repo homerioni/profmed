@@ -202,6 +202,9 @@ $(document).ready(function () {
         $(this).toggleClass('active')
             .parent().find('.prices__item-content').slideToggle();
     });
+    $('.prices__link').click(function (e) {
+        e.stopPropagation();
+    });
 
     // Reviews
     $('.reviews__rating').each(function () {

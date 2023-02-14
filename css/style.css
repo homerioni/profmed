@@ -1415,7 +1415,7 @@ body {
   line-height: 2.4rem;
 }
 .post-treatment__left .blue {
-  color: #1E87FA;
+  font-weight: 600;
 }
 .post-treatment__left h2 {
   font-weight: 500;
@@ -3486,25 +3486,30 @@ body {
   color: #1E87FA;
 }
 .prices__item-title-box {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90rem;
+  gap: 4rem;
 }
 .prices__item-title {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   width: 44rem;
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.9rem;
 }
 .prices__price {
-  width: 40rem;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.9rem;
@@ -3519,7 +3524,22 @@ body {
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
+.prices__btn-box {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8rem;
+}
 .prices__btn-open {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   position: relative;
   width: 4.2rem;
   height: 4.2rem;
@@ -3551,6 +3571,11 @@ body {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.prices__link {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 .prices__item-content {
   display: none;
@@ -3688,6 +3713,16 @@ body {
   .prices__price > sup {
     font-size: 2.6rem;
     line-height: 3.1rem;
+  }
+  .prices__btn-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 4rem;
   }
   .prices__btn-open {
     width: 6.4rem;
@@ -6122,15 +6157,15 @@ body {
   }
 }
 .requisites {
+  padding-top: 8rem;
   margin-bottom: 16rem;
 }
 .requisites__title {
   width: 159.2rem;
-  margin: 0 auto 2.8rem auto;
+  margin: 0 auto 6rem auto;
   font-weight: 500;
   font-size: 4.5rem;
   line-height: 5.5rem;
-  text-align: center;
 }
 .requisites__content {
   position: relative;
@@ -6173,15 +6208,28 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.requisites__text-box > *:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.requisites__text-box .blue {
+  margin-right: 0.8rem;
+  color: #1E87FA;
+}
+.requisites__text-box > a {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.requisites__text-box > a:hover {
+  color: #1a75d9;
+}
 
 @media (max-width: 48em) {
   .requisites {
     margin-bottom: 20rem;
-    padding: 0 4rem;
+    padding: 12rem 4rem 0 4rem;
   }
   .requisites__title {
     width: 100%;
-    margin-bottom: 8rem;
     font-size: 6rem;
     line-height: 8rem;
     text-align: left;
@@ -6220,6 +6268,14 @@ body {
     display: block;
   }
   .requisites__text-box--flex > *:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+  .requisites__text-box > *:not(:last-child) {
+    margin-right: 3rem;
+  }
+  .requisites__text-box .blue {
+    display: block;
+    margin-right: 0;
     margin-bottom: 2.4rem;
   }
 }
@@ -7341,6 +7397,47 @@ body {
   .policy__title {
     font-size: 4rem;
     line-height: 4.8rem;
+  }
+}
+.price-intro {
+  margin-bottom: 7rem;
+  padding-top: 12rem;
+}
+.price-intro__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2.8rem;
+  border-bottom: 2px solid #BFDDFF;
+}
+.price-intro__title {
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 6.7rem;
+}
+.price-intro__btn {
+  padding: 1.6rem 2.8rem;
+}
+
+@media (max-width: 48em) {
+  .price-intro {
+    margin-bottom: 8rem;
+  }
+  .price-intro__container {
+    width: calc(100% - 8rem);
+    margin: 0 auto;
+    padding: 0 0 4.8rem 0;
+    border-bottom: 1px solid #BFDDFF;
+  }
+  .price-intro__title {
+    font-size: 6rem;
+    line-height: 7.2rem;
   }
 }
 .modal {

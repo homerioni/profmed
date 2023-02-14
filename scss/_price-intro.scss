@@ -1,0 +1,43 @@
+.price-intro {
+  margin-bottom: 7rem;
+  padding-top: 12rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.8rem;
+    border-bottom: 2px solid #BFDDFF;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 5.5rem;
+    line-height: 6.7rem;
+  }
+
+  &__btn {
+    padding: 1.6rem 2.8rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .price-intro {
+    margin-bottom: 8rem;
+
+    &__container {
+      width: calc(100% - 8rem);
+      margin: 0 auto;
+      padding: 0 0 4.8rem 0;
+      border-bottom: 1px solid #BFDDFF;
+    }
+
+    &__title {
+      font-size: 6rem;
+      line-height: 7.2rem;
+    }
+
+    &__btn {
+    }
+  }
+}
