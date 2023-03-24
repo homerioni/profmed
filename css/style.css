@@ -7979,7 +7979,8 @@ body {
   height: 68.6rem;
   padding: 1.2rem;
 }
-.modal-intro__content > iframe {
+.modal-intro__content > iframe,
+.modal-intro__content > video {
   width: 100%;
   height: 100%;
   border-radius: inherit;
