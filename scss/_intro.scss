@@ -71,8 +71,32 @@
     }
   }
 
-  &__btn {
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.4rem;
     margin-bottom: 3.2rem;
+  }
+
+  &__form-label {
+    display: block;
+    width: 21.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid #BFDDFF;
+
+    input {
+      width: 100%;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.4rem;
+
+      &::placeholder {
+        color: $gray;
+      }
+    }
+  }
+
+  &__btn {
   }
 
   &__link {
@@ -111,44 +135,79 @@
 
   &__card-item {
     flex: 30%;
-    display: flex;
-    align-items: center;
-    max-width: 51.5rem;
-    padding: 4rem 7.5rem 4rem 5rem;
     border-radius: 1.5rem;
-    background-color: $white;
-    box-shadow: 0 0.5rem 1.5rem rgba(30, 135, 250, 0.07);
+    background-color: #FDFEFF;
+    box-shadow: 0 .5rem 1.5rem 0 rgba(30, 135, 250, 0.07);
+    transition: box-shadow .4s ease;
+
+    > a {
+      display: block;
+      padding: 4rem 4.8rem;
+    }
+
+    &:hover {
+      box-shadow: 0 .5rem 3rem 2rem rgba(30, 135, 250, 0.15);
+    }
   }
 
-  &__card-icon {
-    flex: none;
-    width: 6.2rem;
-    height: 6.2rem;
-    margin-right: 3.2rem;
+  &__card-logo {
+    height: 3.6rem;
+    margin-bottom: 1.2rem;
 
     > img {
-      width: 100%;
+      width: fit-content;
       height: 100%;
       object-fit: contain;
     }
   }
 
-  &__card-text-box {
-  }
-
-  &__card-title {
-    margin-bottom: 0.8rem;
+  &__card-rating-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
     font-weight: 500;
-    font-size: 2.4rem;
-    line-height: 2.9rem;
+    font-size: 2rem;
     color: $blue;
   }
 
-  &__card-text {
+  &__card-rating {
+    display: flex;
+
+    > svg {
+      width: 2.7rem;
+      height: 2.7rem;
+
+      path {
+        stroke: #53CCFF;
+        fill: none;
+      }
+
+      &.active {
+        path {
+          fill: #53CCFF;
+        }
+      }
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.2rem;
     color: $gray;
+
+    > svg {
+      width: 3.5rem;
+      height: .6rem;
+
+      path {
+        fill: #1E87FA;
+      }
+    }
   }
 
   &__video-btn {
@@ -241,8 +300,22 @@
       }
     }
 
-    &__btn {
+    &__form {
+      justify-content: space-between;
       margin-bottom: 4rem;
+    }
+
+    &__form-label {
+      width: 25rem;
+      padding-bottom: 2rem;
+
+      input {
+        font-size: 3rem;
+        line-height: 3.6rem;
+      }
+    }
+
+    &__btn {
     }
 
     &__link {
@@ -268,28 +341,40 @@
 
     &__card-item {
       flex: 100%;
-      max-width: none;
-      padding: 4.8rem;
-      border-radius: 3rem;
-      box-shadow: 0 1rem 3rem rgba(30, 135, 250, 0.07);
+      border-radius: 2rem;
+      box-shadow: 0 .5rem 2rem 0 rgba(30, 135, 250, 0.1);
+
+      > a {
+        padding: 4rem 4.8rem;
+      }
     }
 
-    &__card-icon {
-      width: 9.4rem;
-      height: 9.4rem;
+    &__card-logo {
+      height: 5rem;
+      margin-bottom: 2rem;
     }
 
-    &__card-text-box {
-    }
-
-    &__card-title {
-      font-size: 3.6rem;
-      line-height: 4.4rem;
-    }
-
-    &__card-text {
+    &__card-rating-box {
+      gap: 2rem;
+      margin-bottom: 3rem;
       font-size: 3rem;
-      line-height: 3.6rem;
+    }
+
+    &__card-rating {
+      > svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__link-box {
+      font-size: 3rem;
+      line-height: 4rem;
+
+      > svg {
+        width: 7rem;
+        height: 1.2rem;
+      }
     }
 
     &__video-btn {

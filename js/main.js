@@ -198,6 +198,9 @@ $(document).ready(function () {
     });
 
     // Prices
+    $('.prices__title-box').click(function () {
+        $(this).toggleClass('active').siblings('.prices__main-box').slideToggle();
+    });
     $('.prices__item-title-block').click(function () {
         $(this).toggleClass('active')
             .parent().find('.prices__item-content').slideToggle();

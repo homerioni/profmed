@@ -11,15 +11,42 @@
     }
   }
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+  }
+
+  &__content-item {
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
+  }
+
   &__title-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 7rem;
+    width: 105rem;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    background-color: $white;
+    box-shadow: 0 .5rem 1.5rem 0 rgba(30, 135, 250, 0.07);
+    cursor: pointer;
+
+    &.active {
+      .prices__btn-open {
+        &:after {
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
   }
 
   &__title {
-    width: 105rem;
+    margin-right: 3rem;
     font-weight: 500;
     font-size: 4.5rem;
     line-height: 5.5rem;
@@ -28,13 +55,11 @@
   &__link-more {
   }
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__main-box {
-    width: 105rem;
+    display: none;
+    width: 92rem;
+    margin-top: 7rem;
+    margin-left: auto;
   }
 
   &__item {
@@ -42,6 +67,7 @@
     border-radius: 1.5rem;
     background-color: $white;
     box-shadow: 0 0.5rem 1.5rem rgba(30, 135, 250, 0.07);
+    transition: background-color .3s ease;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -107,7 +133,7 @@
     flex: none;
     display: flex;
     align-items: center;
-    gap: 8rem;
+    gap: 4rem;
   }
 
   &__btn-open {
@@ -221,7 +247,7 @@
 
   &__sidebar-item {
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 7rem;
     }
   }
 
@@ -258,28 +284,38 @@
       }
     }
 
-    &__title-box {
+    &__container {
       display: block;
+    }
+
+    &__content {
       margin-bottom: 8rem;
     }
 
-    &__title {
+    &__content-item {
+      &:not(:last-child) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &__title-box {
       width: 100%;
-      font-size: 6rem;
-      line-height: 8rem;
+      border-radius: 2rem;
+      box-shadow: 0 .5rem 2rem 0 rgba(30, 135, 250, 0.07);
+    }
+
+    &__title {
+      font-size: 5rem;
+      line-height: 6.6rem;
     }
 
     &__link-more {
       margin-bottom: 12rem;
     }
 
-    &__content {
-      display: block;
-    }
-
     &__main-box {
       width: 100%;
-      margin-bottom: 8rem;
+      margin-top: 6rem;
     }
 
     &__item {
@@ -392,7 +428,7 @@
 
     &__sidebar-item {
       &:not(:last-child) {
-        margin-bottom: 4rem;
+        margin-bottom: 8rem;
       }
     }
 

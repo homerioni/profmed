@@ -14,7 +14,6 @@ body {
   top: 0;
   z-index: 6;
   width: 100%;
-  padding: 2rem 0;
   background-color: $white;
   box-shadow: 0 3px 1.2rem rgba(30, 135, 250, 0.04);
 
@@ -22,6 +21,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 2rem 0;
+
+    @media (min-width: 48.01em) {
+      &:not(:last-child) {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: -16.4rem;
+          top: 100%;
+          width: 100vw;
+          height: 2px;
+          background-color: #BFDDFF;
+        }
+      }
+    }
   }
 
   &__burger-btn {
@@ -190,7 +206,7 @@ body {
   &__phone-block {
     display: flex;
     align-items: center;
-    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   &__phone-numbers {
@@ -198,6 +214,7 @@ body {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.2rem;
+    color: $blue;
 
     > * {
       display: block;
@@ -207,7 +224,7 @@ body {
       }
 
       &:hover {
-        color: $blue;
+        color: $def-color;
       }
     }
   }
@@ -241,11 +258,42 @@ body {
       }
     }
   }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: .8rem;
+
+      path {
+        stroke: $blue;
+      }
+    }
+  }
+
+  &__work-time {
+    margin-right: 4.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: right;
+
+    .gray {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: $gray;
+    }
+  }
 }
 
 @media (max-width: 48em) {
   .header {
-    padding: 4rem 0;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
@@ -264,6 +312,11 @@ body {
     }
 
     &__container {
+      padding: 4rem;
+
+      &:last-child {
+        padding: 0;
+      }
     }
 
     &__burger-btn {

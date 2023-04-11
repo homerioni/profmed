@@ -384,25 +384,6 @@ const licenses_modal_slider = new Swiper('.modal-licenses__slider', {
     slidesPerView: 1,
     spaceBetween: rem(2.4),
 
-    pagination: {
-        el: '.modal-licenses .slider-nav__pagination',
-        type: 'fraction',
-        formatFractionCurrent: function (number) {
-            if (number < 10) {
-                return '0' + number;
-            } else {
-                return number;
-            }
-        },
-        formatFractionTotal: function (number) {
-            if (number < 10) {
-                return '0' + number;
-            } else {
-                return number;
-            }
-        },
-    },
-
     navigation: {
         nextEl: '.modal-licenses .next',
         prevEl: '.modal-licenses .prev',
