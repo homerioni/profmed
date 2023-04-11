@@ -3573,6 +3573,34 @@ body {
 .prices--qa .prices__text {
   width: 70rem;
 }
+.prices--qa .prices__title-box {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 7rem;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+}
+.prices--qa .prices__main-box {
+  display: block;
+  width: 105rem;
+  margin-top: 0;
+}
+.prices--one .prices__title-box {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 7rem;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+}
+.prices--one .prices__main-box {
+  display: block;
+  width: 105rem;
+  margin-top: 0;
+}
 .prices__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3830,11 +3858,23 @@ body {
   .prices--qa .prices__text > span:not(:last-child) {
     margin-bottom: 2.4rem;
   }
+  .prices--qa .prices__title-box {
+    margin-bottom: 8rem;
+  }
+  .prices--qa .prices__main-box {
+    width: 100%;
+  }
+  .prices--one .prices__title-box {
+    margin-bottom: 8rem;
+  }
+  .prices--one .prices__main-box {
+    width: 100%;
+  }
   .prices__container {
     display: block;
   }
   .prices__content {
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
   }
   .prices__content-item:not(:last-child) {
     margin-bottom: 6rem;
@@ -3850,7 +3890,7 @@ body {
     line-height: 6.6rem;
   }
   .prices__link-more {
-    margin-bottom: 12rem;
+    margin-top: 8rem;
   }
   .prices__main-box {
     width: 100%;
