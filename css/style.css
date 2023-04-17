@@ -3090,9 +3090,9 @@ body {
   display: block;
   padding: 4rem 4.8rem;
 }
-.intro__card-item:hover {
-  -webkit-box-shadow: 0 0.5rem 3rem 2rem rgba(30, 135, 250, 0.15);
-          box-shadow: 0 0.5rem 3rem 2rem rgba(30, 135, 250, 0.15);
+.intro__card-item:hover .intro__link-box svg {
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
 }
 .intro__card-logo {
   height: 3.6rem;
@@ -3153,6 +3153,10 @@ body {
 .intro__link-box > svg {
   width: 3.5rem;
   height: 0.6rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .intro__link-box > svg path {
   fill: #1E87FA;
