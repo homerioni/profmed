@@ -42,6 +42,9 @@ const intro_slider = new Swiper('.intro__slider', {
         delay: 7000,
     },
 });
+$('.intro .intro__form-label input').focusin(function () {
+    intro_slider.paused = true;
+});
 
 const advantages_slider = new Swiper('.advantages__slider', {
     direction: 'horizontal',
